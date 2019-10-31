@@ -44,7 +44,7 @@ public class EventBusErrorMessage implements Message, StringBuilderFormattable {
     @Override
     public void formatTo(final StringBuilder buffer) {
         buffer.
-                append("Exception caught during firing event: ").append(throwable.getMessage()).append('\n').
+                append("Exception caught during firing event: ").append(throwable.toString()).append('\n').
                 append("\tIndex: ").append(index).append('\n').
                 append("\tListeners:\n");
         for (int x = 0; x < listeners.length; x++)
